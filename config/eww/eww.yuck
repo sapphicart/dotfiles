@@ -1,0 +1,103 @@
+; #############################
+; #	SIDEBAR STUFF	      #
+; #############################
+
+(defwidget main-icons []
+  (box  :class "container"
+	:orientation "vertical"
+	:valign "end"
+	:vexpand true
+   (children)))
+
+
+(defwindow sidebar 
+  :monitor 0 
+  :class "sidebar"
+  :geometry (geometry 
+    :x "3px" 
+    :y "0%" 
+    :width "2.5%" 
+    :height "98%" 
+    :anchor "left center") 
+  :stacking "fg"
+  :focusable "none" 
+  :exclusive "true" 
+  (main-icons
+	(button
+	  :onclick "code &"
+	  :class "code-btn"
+	  "")
+	(button
+	  :onclick "pidof discord && gtk-launch discord || discord --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto &"
+	  :class "discord-btn"
+	  "") 
+	(button 
+	  :onclick "kitty &"
+	  :class "terminal-btn"
+	  "")
+	(button
+ 	  :onclick "nautilus &"
+	  :class "files-btn"
+	  "")
+	(button
+	  :onclick "firefox &"
+	  :class "firefox-btn"
+          "")
+))
+
+
+; ############################
+; #       TOP BAR STUFF	     #
+; ############################
+
+(defpoll space :interval "100ms"
+	"scripts/space-num")
+
+(defwidget workspaces []
+  (box :class "workspaces"
+       :orientation "h"
+       :space-evenly true
+       :halign "start"
+       :spacing 10
+    (button
+	:class {space == 1 ? "active" : "work"}
+	:onclick "hyprctl dispatch workspace 1" "")
+    (button
+	:class {space == 2 ? "active" : "work"} 
+	:onclick "hyprctl dispatch workspace 2" "")
+    (button 
+	:class {space == 3 ? "active" : "work"}
+	:onclick "hyprctl dispatch workspace 3" "")
+    (button 
+	:class {space == 4 ? "active" : "work"}
+	:onclick "hyprctl dispatch workspace 4" "")
+    (button 
+	:class {space == 5 ? "active" : "work"}
+	:onclick "hyprctl dispatch workspace 5" "")
+    (button 
+	:class {space == 6 ? "active" : "work"}
+	:onclick "hyprctl dispatch workspace 6" "")
+    (button 
+	:class {space == 7 ? "active" : "work"}
+	:onclick "hyprctl dispatch workspace 7" "")
+    (button 
+	:class {space == 8 ? "active" : "work"}
+	:onclick "hyprctl dispatch workspace 8" "")
+    (button 
+	:class {space == 9 ? "active" : "work"}
+	:onclick "hyprctl dispatch workspace 9" "")))
+
+
+(defwindow topbar 
+  :monitor 0 
+  :class "topbar"
+  :geometry (geometry 
+    :x "0%" 
+    :y "3px" 
+    :width "97%" 
+    :height "3%" 
+    :anchor "top center") 
+  :stacking "fg"
+  :focusable "none" 
+  :exclusive "true" 
+(workspaces))

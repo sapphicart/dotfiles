@@ -1,0 +1,93 @@
+*{
+  all: unset;
+}
+
+.firefox-btn,
+.files-btn,
+.terminal-btn,
+.discord-btn,
+.code-btn {
+  all: unset;
+  margin: 0px 0px 10px 0px;
+  font-size: 13px;
+  padding: 5px;
+  border-color: transparent;
+  background-color: transparent;
+  box-shadow: none;
+  background: none;
+  border-radius: 20px;
+  transition: background-color 300ms;
+}
+
+.sidebar {
+  all: unset;
+  margin: 1px;
+  background-color: #313244;
+  border-color: #313244;
+  box-shadow: none;
+  border: 2px;
+  border-radius: 20px;
+}
+
+.code-btn {
+  color: #fab387;
+}
+
+.code-btn:hover {
+  background-color: #1e1e2e;
+  border-radius: 20px;
+}
+
+
+.discord-btn {
+  color: #89b4fa;
+}
+
+.discord-btn:hover {
+  background-color: #1e1e2e;
+  border-radius: 20px;
+}
+
+.firefox-btn {
+  color: #f38ba8;
+}
+
+/* Hover */
+.firefox-btn:hover {
+  background-color: #1e1e2e;
+  border-radius: 20px;
+}
+
+
+.files-btn {
+  color: #94e2d5;
+}
+
+.files-btn:hover {
+  background-color: #1e1e2e;
+  border-radius: 20px;
+}
+
+.terminal-btn {
+  color: #cba6f7;
+}
+
+.terminal-btn:hover {
+  background-color: #1e1e2e;
+  border-radius: 20px;
+}
+
+.topbar {
+  background-color: #a1c2ef;
+  padding: 5px;
+}
+
+.work {
+  color: #ffffff; 
+  font-size: 10px;
+}
+
+.active {
+  font-size: 10px;
+  color: #000000;
+}

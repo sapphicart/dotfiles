@@ -1,0 +1,152 @@
+@import "mocha.css";
+
+* {
+  font-family: Adwaita Sans;
+  font-size: 12px;
+  min-height: 0;
+}
+
+#waybar {
+  background: transparent;
+  color: @text;
+  margin: 5px 0px 5px 0px;
+}
+
+
+#workspaces {
+  border-radius: 2rem;
+  background: transparent ;
+  margin: 5px 8px 5px 8px;
+}
+
+#workspaces button {
+  color: @subtext0;
+  padding: 5px;
+  border-radius: 2rem;;
+}
+
+#workspaces button.active {
+  color: @mauve;
+  border-radius: 2rem;
+}
+
+#workspaces button:hover {
+  color: @sapphire;
+  background-color: @mantle;
+  border-radius: 2rem;
+}
+
+#custom-music,
+#tray,
+#backlight,
+#clock,
+#battery,
+#pulseaudio,
+#custom-lock,
+#custom-power,
+#custom-reboot,
+#network,
+#idle_inhibitor,
+#cpu,
+#memory {
+  background-color: @surface0;
+  padding: 0.5rem 1rem;
+  margin: 4px 0;
+}
+
+#clock {
+  color: @blue;
+  border-radius: 0px 2rem 2rem 0px;
+  margin-right: 1rem;
+}
+
+#network {
+  color: @peach;
+  border-radius: 0px 2rem 2rem 0px;
+  margin-right: 1rem;
+}
+
+
+#battery {
+  color: @green;
+}
+
+#battery.charging {
+  color: @green;
+}
+
+#battery.warning:not(.charging) {
+  color: @red;
+}
+
+#cpu {
+  color: @pink;
+}
+
+#cpu.warning {
+  color: @yellow;
+}
+
+#cpu.critical {
+  color: @red;
+}
+
+#memory {
+  color: @blue;
+}
+
+#memory.warning {
+  color: @yellow;
+}
+
+#memory.critical {
+  color: @red;
+}
+
+#backlight {
+  color: @yellow;
+}
+
+#backlight, #battery {
+    border-radius: 0;
+}
+
+#pulseaudio {
+  color: @maroon;
+}
+
+
+#custom-music {
+  color: @mauve;
+  border-radius: 2rem 0px 0px 2rem;
+}
+
+#idle_inhibitor {
+  border-radius: 2rem 0px 0px 2rem;
+  color: @maroon;
+}
+
+
+#idle_inhibitor.activated {
+  color: @green;
+}
+
+#custom-reboot {
+  border-radius: 2rem 0px 0px 2rem;
+  color: @flamingo;
+}
+
+#custom-lock {
+    color: @lavender;
+}
+
+#custom-power {
+    margin-right: 1rem;
+    border-radius: 0px 2rem 2rem 0px;
+    color: @red;
+}
+
+#tray {
+  margin-right: 1rem;
+  border-radius: 2rem;
+}
