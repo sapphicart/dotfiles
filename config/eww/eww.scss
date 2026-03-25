@@ -6,7 +6,8 @@
 .files-btn,
 .terminal-btn,
 .discord-btn,
-.code-btn {
+.code-btn,
+.calc-btn {
   all: unset;
   margin: 0px 0px 10px 0px;
   font-size: 13px;
@@ -34,6 +35,15 @@
 }
 
 .code-btn:hover {
+  background-color: #1e1e2e;
+  border-radius: 20px;
+}
+
+.calc-btn {
+  color: #f5c2e7;
+}
+
+.calc-btn:hover {
   background-color: #1e1e2e;
   border-radius: 20px;
 }

@@ -24,6 +24,10 @@
   :exclusive "true" 
   (main-icons
 	(button
+	  :onclick "pidof qalculate-qt || qalculate-qt &"
+	  :class "calc-btn"
+	  "")
+	(button
 	  :onclick "code &"
 	  :class "code-btn"
 	  "")

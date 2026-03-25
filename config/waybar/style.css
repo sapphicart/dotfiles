@@ -85,6 +85,23 @@
   color: @red;
 }
 
+@keyframes blink {
+    to {
+        background-color: @crust;
+        color: @red;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: @red;
+    color: @crust;
+    animation-name: blink;
+    animation-duration: 0.3s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
 #cpu {
   color: @pink;
 }
