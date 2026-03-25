@@ -20,7 +20,7 @@
 }
 
 #workspaces button {
-  color: @subtext0;
+  color: @overlay2;
   padding: 5px;
   border-radius: 2rem;;
 }
@@ -36,22 +36,27 @@
   border-radius: 2rem;
 }
 
-#custom-music,
-#tray,
-#backlight,
-#clock,
-#battery,
-#pulseaudio,
+#custom-reboot,
 #custom-lock,
 #custom-power,
-#custom-reboot,
+#clock,
+#custom-music {
+  background-color: @surface0;
+  padding: 0.5rem 1rem;
+  margin: 5px 0;
+}
+
+#tray,
+#backlight,
+#battery,
+#pulseaudio,
 #network,
 #idle_inhibitor,
 #cpu,
 #memory {
   background-color: @surface0;
-  padding: 0.5rem 1rem;
-  margin: 4px 0;
+  padding: 0.5rem 0.7rem;
+  margin: 5px 0;
 }
 
 #clock {
@@ -63,6 +68,7 @@
 #network {
   color: @peach;
   border-radius: 0px 2rem 2rem 0px;
+  padding-right: 1rem;
   margin-right: 1rem;
 }
 
@@ -122,6 +128,7 @@
 }
 
 #idle_inhibitor {
+  padding-left: 1rem;
   border-radius: 2rem 0px 0px 2rem;
   color: @maroon;
 }
