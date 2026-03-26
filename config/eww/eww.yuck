@@ -26,30 +26,37 @@
 	(button
 	  :onclick "/home/shrutip/ida-free-9.3/ida &"
 	  :class "ida-btn"
+	  :tooltip "IDA Free"
      	  "")
 	(button
 	  :onclick "pidof qalculate-qt || qalculate-qt &"
 	  :class "calc-btn"
+	  :tooltip "Calculator"
 	  "")
 	(button
 	  :onclick "code &"
 	  :class "code-btn"
+	  :tooltip "VSCode"
 	  "")
 	(button
 	  :onclick "pidof discord && gtk-launch discord || discord --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto &"
 	  :class "discord-btn"
+	  :tooltip "Discord"
 	  "") 
 	(button 
 	  :onclick "kitty ~ &"
 	  :class "terminal-btn"
+	  :tooltip "Terminal"
 	  "")
 	(button
  	  :onclick "nautilus &"
 	  :class "files-btn"
+	  :tooltip "Files"
 	  "")
 	(button
 	  :onclick "firefox &"
 	  :class "firefox-btn"
+	  :tooltip "Firefox"
           "")
 ))
 
