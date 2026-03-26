@@ -104,7 +104,7 @@
     "custom/power": {
         "tooltip": true,
 	"tooltip-format":"Power Off",
-        "on-click": "systemctl poweroff",
+        "on-click": "command -v hyprshutdown > /dev/null 2>&1 && hyprshutdown || hyprctl dispatch exit",
         "format": ""
     },
     "idle_inhibitor": {
