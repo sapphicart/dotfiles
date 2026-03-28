@@ -14,7 +14,7 @@
   :monitor 0 
   :class "sidebar"
   :geometry (geometry 
-    :x "3px" 
+    :x "5px" 
     :y "0%" 
     :width "2.5%" 
     :height "98%" 
