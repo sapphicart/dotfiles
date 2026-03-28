@@ -14,16 +14,16 @@ base_files = []
 
 def copy_to_git(config_dir, base_dir, files):
     print("Copying .config files to git...")
-    for i in range(len(files)):
-        subprocess.run(["cp", f"{config_dir}{files[i]}", f"{base_dir}{files[i]}"])
+    for file in files:
+        subprocess.run(["cp", f"{config_dir}{file}", f"{base_dir}{file}"])
 
     print("Done.")
 
 
 def copy_to_config(base_dir, config_dir, files):
     print("Copying git files to .config...")
-    for i in range(len(files)):
-        subprocess.run(["cp", f"{base_dir}{files[i]}", f"{config_dir}{files[i]}"])
+    for file in files:
+        subprocess.run(["cp", f"{base_dir}{file}", f"{config_dir}{file}"])
 
     print("Done.")
 
@@ -41,10 +41,10 @@ def get_check_files(config_dir, base_dir):
             else:
                 continue
 
-    for i in range(len(base_files)):
-        out = subprocess.run(["diff", "-s", f"{config_dir}{base_files[i]}", f"{base_dir}{base_files[i]}"], capture_output=True)
+    for file in base_files:
+        out = subprocess.run(["diff", "-s", f"{config_dir}{file}", f"{base_dir}{file}"], capture_output=True)
         if 'identical' not in out.stdout.decode():
-            to_cp.append(base_files[i])
+            to_cp.append(file)
 
 
     if len(to_cp) == 0:
@@ -52,8 +52,8 @@ def get_check_files(config_dir, base_dir):
         print("Everything is up to date.")
     else:
         print("Found differences in the following files:")
-        for i in range(len(to_cp)):
-            print(to_cp[i])
+        for file in to_cp:
+            print(file)
 
     return to_cp
 
