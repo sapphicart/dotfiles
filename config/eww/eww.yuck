@@ -24,7 +24,12 @@
   :exclusive "true" 
   (main-icons
 	(button
-	  :onclick "/home/shrutip/ida-free-9.3/ida &"
+	  :onclick "$BOOK &"
+	  :class "book-btn"
+	  :tooltip "Read"
+	  "")
+	(button
+	  :onclick "$HOME/ida-free-9.3/ida &"
 	  :class "ida-btn"
 	  :tooltip "IDA Free"
      	  "")
